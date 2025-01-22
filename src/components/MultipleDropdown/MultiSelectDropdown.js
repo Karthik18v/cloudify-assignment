@@ -8,19 +8,16 @@ const MultiSelectDropdown = ({ options }) => {
   const [newItem, setNewItem] = useState();
   const dropdownRef = useRef(null);
 
-  // Add selected item to the input area
   const handleSelectItem = (item) => {
     if (!selectedItems.includes(item)) {
       setSelectedItems([...selectedItems, item]);
     }
   };
 
-  // Remove selected item
   const handleRemoveItem = (item) => {
     setSelectedItems(selectedItems.filter((selected) => selected !== item));
   };
 
-  // Close the dropdown when clicking outside
   const handleClickOutside = (event) => {
     if (dropdownRef.current && !dropdownRef.current.contains(event.target)) {
       setDropdownVisible(false);
@@ -32,11 +29,12 @@ const MultiSelectDropdown = ({ options }) => {
       if (!multiSelectOptions.includes(newItem)) {
         setMultiSelectOptions([...multiSelectOptions, newItem]);
         setNewItem("");
+      } else {
+        setNewItem("");
       }
     }
   };
 
-  // Attach event listener for clicks outside
   React.useEffect(() => {
     document.addEventListener("mousedown", handleClickOutside);
     return () => {
@@ -46,7 +44,6 @@ const MultiSelectDropdown = ({ options }) => {
 
   return (
     <div className="dropdown-container" ref={dropdownRef}>
-      {/* Input Area */}
       <div
         className="input-area"
         onClick={() => setDropdownVisible((prev) => !prev)}
@@ -73,7 +70,6 @@ const MultiSelectDropdown = ({ options }) => {
         />
       </div>
 
-      {/* Dropdown */}
       {isDropdownVisible && (
         <div className="dropdown">
           <ul className="dropdown-list">
