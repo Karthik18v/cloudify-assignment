@@ -1,70 +1,128 @@
-# Getting Started with Create React App
+# Table Component with Dropdowns
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+This project demonstrates a dynamic table component in React with two types of dropdowns: a single-select dropdown and a multi-select dropdown. Users can add new rows to the table and interact with the dropdowns in each row.
 
-## Available Scripts
+## Features
 
-In the project directory, you can run:
+- **Dynamic Rows**: Add new rows to the table dynamically.
+- **Single-Select Dropdown**: Each row contains a dropdown with unique single-select options.
+- **Multi-Select Dropdown**: Each row includes a multi-select dropdown that supports adding custom options.
+- **Customizable Options**: Users can add new options to the multi-select dropdown.
+- **Interactive UI**: Provides a user-friendly interface with smooth interactions.
 
-### `yarn start`
+## Project Structure
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+The project consists of the following components:
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+1. **Table**: The main component that renders the table and manages state for rows.
+2. **SingleSelectDropdown**: A dropdown for selecting a single option.
+3. **MultiSelectDropdown**: A dropdown that allows selecting multiple options and adding new options.
 
-### `yarn test`
+## Technologies Used
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+- React
+- JavaScript (ES6+)
+- CSS for styling
 
-### `yarn build`
+## Getting Started
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+Follow these steps to run the project locally:
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+### Prerequisites
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+Ensure you have the following installed on your system:
 
-### `yarn eject`
+- Node.js (version 14 or higher)
+- npm (Node Package Manager)
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+### Installation
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+1. **Clone the Repository**:
+   ```bash
+   git clone <repository_url>
+   ```
+   Replace `<repository_url>` with the URL of your GitHub repository.
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+2. **Navigate to the Project Directory**:
+   ```bash
+   cd <project-directory-name>
+   ```
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+3. **Install Dependencies**:
+   ```bash
+   npm install
+   ```
 
-## Learn More
+### Running the Application
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+1. **Start the Development Server**:
+   ```bash
+   npm start
+   ```
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+2. **Open in Browser**:
+   Navigate to `http://localhost:3000` in your browser to view the application.
 
-### Code Splitting
+## Usage
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+1. **Add New Rows**:
+   Click the "+ Add New Row" button to add a new row to the table.
 
-### Analyzing the Bundle Size
+2. **Single-Select Dropdown**:
+   - Select an option from the dropdown in the "Label 1" column.
+   - Each dropdown option can be selected only once across all rows.
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
+3. **Multi-Select Dropdown**:
+   - Select multiple options from the dropdown in the "Label 2" column.
+   - Add new options to the dropdown using the input field and the "+ Add" button.
 
-### Making a Progressive Web App
+## Project Components
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
+### Table
+The `Table` component manages the state of rows and dropdown options. It renders the table and integrates the `SingleSelectDropdown` and `MultiSelectDropdown` components.
 
-### Advanced Configuration
+### SingleSelectDropdown
+A simple dropdown that allows users to select one option. It ensures options are unique across rows.
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
+### MultiSelectDropdown
+A dropdown that allows selecting multiple options and adding new options dynamically. It features an input field for adding custom options.
 
-### Deployment
+## Customization
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
+You can customize the dropdown options by modifying the `options1` and `initialMultiSelectOptions` variables in the `Table` component.
 
-### `yarn build` fails to minify
+## Folder Structure
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+```
+src/
+├── components/
+│   ├── Table/
+│   │   ├── Table.js
+│   │   ├── Table.css
+│   ├── SinglePageDropdown/
+│   │   ├── SingleSelectDropdown.js
+│   ├── MultipleDropdown/
+│       ├── MultiSelectDropdown.js
+│       ├── MultiSelectDropdown.css
+├── App.js
+├── index.js
+```
+
+## Contributing
+
+Contributions are welcome! If you'd like to contribute:
+
+1. Fork the repository.
+2. Create a new branch for your feature/bugfix.
+3. Commit your changes and push them to your branch.
+4. Submit a pull request.
+
+## License
+
+This project is licensed under the MIT License. See the LICENSE file for details.
+
+## Acknowledgments
+
+- React documentation for guidance on building components.
+- Community tutorials for inspiration on multi-select dropdown functionality.
+
